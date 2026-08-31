@@ -39,6 +39,8 @@ func (h *StatisticsHTTPHandler) GetStatistics(rw http.ResponseWriter, r *http.Re
 			err,
 			"failed to get statistics",
 		)
+
+		return
 	}
 
 	response := toDTOFromDomain(statisticsDomain)
